@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>on click</title>
+  </head>
+  <style type="text/css">
+    #div1 {
+      background-color: red;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+  </style>
+
+  <body>
+    <button>Click me!</button> 
+    <div id="div1">
+      Hello World!!
+    </div>
+  </body>
+</html>
+
+<script type="text/javascript">
+  function onClick() {
+    const myDiv1 = document.querySelector('#div1');
+    myDiv1.style.background = 'green';
+  }
+  const myButton = document.querySelector('button');
+  myButton.addEventListener('click', onClick);
+</script>

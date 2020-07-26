@@ -1,0 +1,39 @@
+<script type="text/javascript">
+  let hello = function(name) {
+    console.log(`Hi ${name}`);
+  };
+  var test = hello('Tom');
+  console.log(test);
+
+  let greet = function() {
+    console.log('Hi ' + this.name);
+    console.log('My age is ' + this.age);
+  };
+
+  let Person = function(name, age) {
+    this.name = name;
+    this.age = age;
+    this.hello = function() {
+      console.log('Hi ' + this.name);
+      console.log('My age is ' + this.age);
+    };
+  };
+
+  let person = {
+    name: 'Anusree',
+    age: 24,
+    hello: greet
+  };
+
+  let person2 = {
+    name: 'Anoop',
+    age: 29,
+    hello: greet
+  };
+
+  person.hello();
+  person2.hello();
+
+  let person3 = new Person('Bruno', 1);
+  console.log(person3);
+</script>
