@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bquery</title>
+</head>
+<body>
+	<button id="get-btn">GET data</button>
+</body>
+<script type="text/javascript" src="bquery.js"></script>
+<script type="text/javascript">
+	const getBtn = document.getElementById("get-btn");
+	getBtn.onclick = function() {
+		getData();
+	};
+
+	const getData = function() {
+		bquery.ajax({
+			method: 'GET',
+			url: 'https://reqres.in/api/users',
+			success: function(data) {
+				console.log(data);
+			}
+		});
+	};
+</script>
+</html>
